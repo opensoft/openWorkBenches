@@ -1,5 +1,17 @@
 # openWorkBenches
 
+The main product assembly: bench catalogs, compatible component versions, shared images, integration validation, and assembled releases.
+
+Components each have their own assembly, spec, and code repositories:
+
+| Component | Assembly repository |
+|---|---|
+| Desktop and mobile app | [openWorkBenchesApp](https://github.com/opensoft/openWorkBenchesApp) |
+| Installer and CLI | [openWorkBenchesCli](https://github.com/opensoft/openWorkBenchesCli) |
+| Organization service | [openWorkBenchesService](https://github.com/opensoft/openWorkBenchesService) |
+
+Component assembly names follow the current openRepoShape naming policy. Product integration will consume exact component revisions; the initial scaffold pins its own spec and code legs.
+
 The ASSEMBLY ROOT of the `openworkbenches` project — the repository you clone.
 It holds no product code of its own: it holds the manifest that says what this
 project IS, the two legs as submodules, and the pins that say which commit of
@@ -165,3 +177,8 @@ Everything under `scripts/`, plus `contracts/repository-naming.yaml` and
 `contracts/shape-pin.yaml`. Edit them upstream, not here — a local edit is
 reported as drift. `AGENTS.md` and `CLAUDE.md` have no row and are this
 project's own.
+
+
+## License
+
+Apache-2.0. Copyright 2026 OpenSoft. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
